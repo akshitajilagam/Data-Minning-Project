@@ -1,0 +1,48 @@
+=== Run information ===
+
+Scheme:       weka.associations.Apriori -N 10 -T 0 -C 0.9 -D 0.05 -U 1.0 -M 0.1 -S -1.0 -c -1
+Relation:     integrated_dataset-weka.filters.unsupervised.instance.RemoveDuplicates-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0-weka.filters.unsupervised.attribute.NumericToNominal-Rfirst-last
+Instances:    566
+Attributes:   11
+              age
+              gender
+              bmi
+              blood_glucose_level
+              hypertension
+              heart_disease
+              smoking_history
+              diabetes
+              sleep_hours
+              family_history_diabetes
+              diet_type
+=== Associator model (full training set) ===
+
+
+Apriori
+=======
+
+Minimum support: 0.6 (340 instances)
+Minimum metric <confidence>: 0.9
+Number of cycles performed: 8
+
+Generated sets of large itemsets:
+
+Size of set of large itemsets L(1): 5
+
+Size of set of large itemsets L(2): 7
+
+Size of set of large itemsets L(3): 3
+
+Best rules found:
+
+ 1. smoking_history=Unknown 388 ==> heart_disease=0 388    <conf:(1)> lift:(1.02) lev:(0.01) [6] conv:(6.17)
+ 2. hypertension=0 smoking_history=Unknown 385 ==> heart_disease=0 385    <conf:(1)> lift:(1.02) lev:(0.01) [6] conv:(6.12)
+ 3. bmi=0.320812 heart_disease=0 360 ==> hypertension=0 359    <conf:(1)> lift:(1.03) lev:(0.02) [9] conv:(5.09)
+ 4. bmi=0.320812 hypertension=0 360 ==> heart_disease=0 359    <conf:(1)> lift:(1.01) lev:(0.01) [4] conv:(2.86)
+ 5. bmi=0.320812 362 ==> hypertension=0 360    <conf:(0.99)> lift:(1.02) lev:(0.01) [8] conv:(3.41)
+ 6. bmi=0.320812 362 ==> heart_disease=0 360    <conf:(0.99)> lift:(1.01) lev:(0.01) [3] conv:(1.92)
+ 7. smoking_history=Unknown 388 ==> hypertension=0 385    <conf:(0.99)> lift:(1.02) lev:(0.01) [7] conv:(2.74)
+ 8. heart_disease=0 smoking_history=Unknown 388 ==> hypertension=0 385    <conf:(0.99)> lift:(1.02) lev:(0.01) [7] conv:(2.74)
+ 9. smoking_history=Unknown 388 ==> hypertension=0 heart_disease=0 385    <conf:(0.99)> lift:(1.03) lev:(0.02) [11] conv:(3.6)
+10. bmi=0.320812 362 ==> hypertension=0 heart_disease=0 359    <conf:(0.99)> lift:(1.03) lev:(0.02) [10] conv:(3.36)
+

@@ -1,0 +1,38 @@
+=== Run information ===
+
+Scheme:       weka.associations.FPGrowth -P 2 -I -1 -N 10 -T 0 -C 0.9 -D 0.05 -U 1.0 -M 0.1
+Relation:     integrated_dataset-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0-weka.filters.unsupervised.attribute.Remove-R1,3-4,9-weka.filters.unsupervised.attribute.NumericToNominal-Rfirst-last-weka.filters.unsupervised.attribute.NominalToBinary-Rfirst-last-weka.filters.unsupervised.attribute.NumericToNominal-Rfirst-last
+Instances:    572
+Attributes:   17
+              gender=Male
+              hypertension=1
+              heart_disease=1
+              smoking_history=Unknown
+              smoking_history=never
+              smoking_history=current
+              smoking_history=former
+              smoking_history=ever
+              smoking_history=not current
+              diabetes=Yes
+              family_history_diabetes=unknown
+              family_history_diabetes=yes
+              family_history_diabetes=no
+              diet_type=unknown
+              diet_type=non-vegetarian
+              diet_type=mixed
+              diet_type=vegetarian
+=== Associator model (full training set) ===
+
+FPGrowth found 16 rules (displaying top 10)
+
+ 1. [family_history_diabetes=yes=1]: 153 ==> [smoking_history=Unknown=1]: 153   <conf:(1)> lift:(1.45) lev:(0.08) conv:(47.61) 
+ 2. [family_history_diabetes=no=1]: 140 ==> [smoking_history=Unknown=1]: 140   <conf:(1)> lift:(1.45) lev:(0.08) conv:(43.57) 
+ 3. [diet_type=non-vegetarian=1]: 107 ==> [smoking_history=Unknown=1]: 107   <conf:(1)> lift:(1.45) lev:(0.06) conv:(33.3) 
+ 4. [diet_type=vegetarian=1]: 102 ==> [smoking_history=Unknown=1]: 102   <conf:(1)> lift:(1.45) lev:(0.06) conv:(31.74) 
+ 5. [family_history_diabetes=unknown=1]: 279 ==> [diet_type=unknown=1]: 279   <conf:(1)> lift:(2.05) lev:(0.25) conv:(142.91) 
+ 6. [diet_type=unknown=1]: 279 ==> [family_history_diabetes=unknown=1]: 279   <conf:(1)> lift:(2.05) lev:(0.25) conv:(142.91) 
+ 7. [smoking_history=never=1]: 112 ==> [family_history_diabetes=unknown=1]: 112   <conf:(1)> lift:(2.05) lev:(0.1) conv:(57.37) 
+ 8. [smoking_history=never=1]: 112 ==> [diet_type=unknown=1]: 112   <conf:(1)> lift:(2.05) lev:(0.1) conv:(57.37) 
+ 9. [smoking_history=Unknown=1, family_history_diabetes=unknown=1]: 101 ==> [diet_type=unknown=1]: 101   <conf:(1)> lift:(2.05) lev:(0.09) conv:(51.74) 
+10. [smoking_history=Unknown=1, diet_type=unknown=1]: 101 ==> [family_history_diabetes=unknown=1]: 101   <conf:(1)> lift:(2.05) lev:(0.09) conv:(51.74) 
+
